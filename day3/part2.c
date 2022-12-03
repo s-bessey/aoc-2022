@@ -27,7 +27,7 @@ int main() {
                     if (line1[i] == line2[j] && line2[j] == line3[k]){
                         e = strchr(alphabet, line1[i]);
                         val = (int)(e - alphabet);
-                        sum += (int)(e - alphabet);
+                        sum += val;
                     }
                 }
             }

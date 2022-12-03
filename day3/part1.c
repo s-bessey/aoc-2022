@@ -22,7 +22,7 @@ int main() {
                 if (line[i] == line[j]) {
                     e = strchr(alphabet, line[i]);
                     val = (int)(e - alphabet);
-                    sum += (int)(e - alphabet);
+                    sum += val;
                     break;
                 }
             }
