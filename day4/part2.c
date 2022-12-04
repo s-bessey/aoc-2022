@@ -20,13 +20,7 @@ int main() {
         int two_first = atoi(strtok(token2, "-"));
         int two_second = atoi(strtok(NULL, "-"));
 
-        if ((one_first >= two_first && one_first <= two_second) || 
-                (one_second <= two_second && one_second >= two_first) || 
-                (one_second == two_first) || 
-                (one_first == two_second) ||
-                (one_first <= two_first && one_second >= two_second) ||
-                (one_first >= two_first && one_second <= two_second)
-            ) {
+        if (!(one_first > two_second || one_second < two_first)) {
             pairs++;
         }
     }
