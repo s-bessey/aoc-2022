@@ -19,27 +19,26 @@ int main() {
         char delimiter[] = " ";
         char *op = strtok(line, delimiter);
         int v = atoi(strtok(NULL, delimiter));
-
+        // next cycle
+        cycle++;
         // if no operation, just check if we're in a cycle we want
         if (strcmp(op, "noop") == 0){
             if ((cycle - 20) % 40 == 0 && cycle < 221){
                 value += (cycle * signal);
                 printf("%d %d %d\n", value, cycle, signal);
             }
-            cycle++;
-
         } else {
             // Otherwise, check this cycle, increment, then check again
             if ((cycle - 20) % 40 == 0 && cycle < 221){
                 value += (cycle * signal);
                 printf("%d %d %d\n", value, cycle, signal);
             }
+            // this operation takes 2 cycles
             cycle++;
             if ((cycle - 20) % 40 == 0 && cycle < 221){
                 value += (cycle * signal);
                 printf("%d %d %d\n", value, cycle, signal);
             }
-            cycle++;
             // add value to signal
             signal += v;
         }
