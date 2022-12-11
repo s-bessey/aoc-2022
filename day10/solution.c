@@ -71,7 +71,7 @@ int part2(){
     }
     for (int i = 0; i < 6; i++){
         for (int j = 0; j < 40; j++){
-            printf(drawing[i][j] ? "1" : " ");
+            printf(drawing[i][j] ? "█" : " ");
         }
         printf("\n");
     }
